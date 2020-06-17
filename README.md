@@ -14,7 +14,7 @@ class HardWorker
 end
 ```
 
-```
+```ruby
 HardWorker.perform_async('bob', 5)
 ```
 
@@ -57,8 +57,9 @@ AF_WORKER(worker_2, int a, int b) {
 Next, anywhere in the client, you can schedule a background job:
 
 ```c
-AF_SCHEDULE(worker_1, result, str, i);
-AF_SCHEDULE(worker_2, result, i, i * 3);
+af_client_result_t result;
+AF_SCHEDULE(worker_1, &result, "Hello world", 123);
+AF_SCHEDULE(worker_2, &result, 1, 2);
 ```
 
 That's it. The interface of Awesome Farm is elegant, and simple enough. Although there are still some boilerplates and longer than Ruby's original system.
