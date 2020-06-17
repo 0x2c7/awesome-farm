@@ -1,3 +1,4 @@
 build/*
 core
 .gdb_history
+compile_flags.txt
