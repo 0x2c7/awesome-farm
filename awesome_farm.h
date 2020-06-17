@@ -1,5 +1,5 @@
-#ifndef ANIMAL_FARM_INCLUDED
-#define ANIMAL_FARM_INCLUDED
+#ifndef AWESOME_FARM_INCLUDED
+#define AWESOME_FARM_INCLUDED
 
 #include <stdlib.h>
 #include <stdarg.h>

@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "animal_farm.h"
+#include "awesome_farm.h"
 #include "ffi.h"
 
 af_client_result_t *af_init(char * host, int port) {

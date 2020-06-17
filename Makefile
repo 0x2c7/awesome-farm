@@ -13,15 +13,15 @@ LIB=$(HIREDIS_LIBRARY) $(LIBFFI_LIBRARY) $(MSGPACK_LIBRARY)
 $(BUILD_FOLDER)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-build: animal_farm.c $(OBJ) $(LIB)
-	$(CC) $(CFLAGS) -shared animal_farm.c $(OBJ) $(LIB) -o $(BUILD_FOLDER)/animal-farm.so
+build: awesome_farm.c $(OBJ) $(LIB)
+	$(CC) $(CFLAGS) -shared awesome_farm.c $(OBJ) $(LIB) -o $(BUILD_FOLDER)/awesome-farm.so
 
 test_client: build
-	$(CC) $(CFLAGS) test/test_client.c test/test_workers.c $(BUILD_FOLDER)/animal-farm.so -o $(BUILD_FOLDER)/test_client
+	$(CC) $(CFLAGS) test/test_client.c test/test_workers.c $(BUILD_FOLDER)/awesome-farm.so -o $(BUILD_FOLDER)/test_client
 	$(BUILD_FOLDER)/test_client
 
 test_server: build
-	$(CC) $(CFLAGS) test/test_server.c test/test_workers.c $(BUILD_FOLDER)/animal-farm.so -o $(BUILD_FOLDER)/test_server
+	$(CC) $(CFLAGS) test/test_server.c test/test_workers.c $(BUILD_FOLDER)/awesome-farm.so -o $(BUILD_FOLDER)/test_server
 	$(BUILD_FOLDER)/test_server
 
 .PHONY: clean
