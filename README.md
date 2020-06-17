@@ -89,4 +89,4 @@ make test_server
 - I know that the whole implementation is so naive, as I am just a newbie in C, and gonna learn a lot of things to make it better.
 - I learned a lot about multi-thread processing, virtual address space, debugging with GDB, trace memory leaks, etc. It's awesome.
 - Applying high-level programming language pragmatics and design patterns into low-level programming such as C is extremely hard, and stratined. The system is not at the level of conveniency as I expected.
-- Making this sytem reliable regardless of user's program exution is hard. I am adoting some native mechanisms to increase the level of reliability, but they are all easy to break. Maybe I'll need higher level of isolation or even containers in future.
+- Making this sytem reliable regardless of user's program execution is hard. I am adoting some native mechanisms to increase the level of reliability, but they are all easy to break. Maybe I'll need higher level of isolation or even containers in future.
