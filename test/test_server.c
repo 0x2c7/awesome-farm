@@ -6,13 +6,6 @@ int main() {
 
     af_client_result_t *result = af_init("localhost", 6379);
 
-    if (result->status == AF_CLIENT_ERROR) {
-        printf("Error: %s\n", result->msg);
-        free(result);
-        return 1;
-    }
-    free(result);
-
     af_server_configuration configuration = {
         .redisHost = "localhost",
         .redisPort = 6379,
@@ -22,13 +15,6 @@ int main() {
         .daemon = 0,
     };
 
-    af_server_result_t *server_result = af_start_server(configuration);
-    if (result->status == AF_SERVER_ERROR) {
-        printf("Error: %s\n", result->msg);
-        free(server_result);
-        return 1;
-    }
+    af_start_server(configuration);
     af_cleanup();
-
-    return 0;
 }
